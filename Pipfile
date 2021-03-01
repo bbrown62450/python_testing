@@ -1,0 +1,20 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pytest = "==5.4.2"
+pytest-mock = "==3.1.1"
+responses = "==0.10.14"
+
+[packages]
+selenium = "==3.141.0"
+appium-python-client = "==1.0.2"
+decorator = "==4.4.2"
+requests = "==2.24.0"
+testproject-python-sdk = "~=0.65.2"
+GitPython = "~=3.1.11"
+eyes-selenium = "~=4.13.2"
+pytest-html = "~=3.1.1"
+chromedriver-py = "==88.0.4324.96"
