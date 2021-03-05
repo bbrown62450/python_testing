@@ -1,22 +1,20 @@
 import pytest
 from pages import LandingPage
-from conftest import driver
+
 
 @pytest.fixture(name="setup")
-def setup():
+def setup(driver):
     global landing_page
     landing_page = LandingPage(driver)
     landing_page.open()
 
-def test_link_logo_displayed(setup):
-    assert landing_page.link_logo_displayed()
+@pytest.mark.usefixtures('driver')
+class TestLandingPage:
+    def test_link_logo_displayed(self, setup):
+        assert landing_page.link_logo_displayed()
 
-def test_div_start_online_order_displayed(setup):
-    assert landing_page.div_start_online_order_displayed()
-
-@pytest.fixture(name="teardown")
-def teardown():
-    driver.close()
+    def test_div_start_online_order_displayed(self):
+        assert landing_page.div_start_online_order_displayed()
 
 
 
