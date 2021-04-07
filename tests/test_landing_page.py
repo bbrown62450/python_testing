@@ -7,6 +7,7 @@ def setup(driver):
     global landing_page
     landing_page = LandingPage(driver)
     landing_page.open()
+    print("Navigated to Little Caesars Homepage")
 
 @pytest.mark.usefixtures('driver')
 class TestLandingPage:
