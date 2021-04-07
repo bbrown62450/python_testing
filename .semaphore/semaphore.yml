@@ -10,4 +10,7 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
+            - apt install python-pytest
+        - name: 'Job #2'
+          commands:
             - pytest
