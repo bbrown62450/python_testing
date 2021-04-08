@@ -10,8 +10,8 @@ blocks:
       jobs:
         - name: pytest
           commands:
-            - apt-get update
-            - apt-get install google-chrome-stable -y
+            - sudo apt-get update
+            - sudo apt-get install google-chrome-stable -y
             - sem-version python 3.7
             - checkout
             - python -m pip install --upgrade pip
