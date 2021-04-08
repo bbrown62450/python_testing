@@ -10,8 +10,7 @@ blocks:
       jobs:
         - name: pytest
           commands:
-            - npm install wget
-            - 'https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'
+            - 'npm install wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'
             - sudo apt install -y ./google-chrome-stable_current_amd64.deb apt-get
             - checkout
             - python -m pip install --upgrade pip
