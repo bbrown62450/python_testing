@@ -10,8 +10,8 @@ blocks:
       jobs:
         - name: pytest
           commands:
-            - 'docker run -d -p 4444:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome:4.0.0-beta-3-prerelease-20210402'
-            - checkout
+            - 'docker run -d -p 4444:4444 --net grid --name selenium-hub selenium/hub:3.141.59'
+            - 'docker run -d --net grid -e HUB_HOST=selenium-hub --name chrome -v /dev/shm:/dev/shm selenium/node-chromecheckout'
             - python -m pip install --upgrade pip
             - pip install pipenv
             - pipenv update
