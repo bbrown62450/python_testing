@@ -10,8 +10,7 @@ blocks:
       jobs:
         - name: pytest
           commands:
-            - 'npm install wget '
-            - sudo apt install -y ./google-chrome-stable_current_amd64.deb apt-get
+            - 'docker run -d -p 4444:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome:4.0.0-beta-3-prerelease-20210402'
             - checkout
             - python -m pip install --upgrade pip
             - pip install pipenv
